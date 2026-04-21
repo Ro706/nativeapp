@@ -2,13 +2,15 @@
   "expo": {
     "name": "app",
     "slug": "app",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "app",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+
     "platforms": ["ios", "android", "web"],
+
     "splash": {
       "image": "./assets/images/icon.png",
       "resizeMode": "contain",
@@ -17,23 +19,28 @@
         "backgroundColor": "#000000"
       }
     },
+
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.ro706.app"
     },
+
     "android": {
       "package": "com.ro706.app",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#E6F4FE"
       },
+      "permissions": ["RECORD_AUDIO"],
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
+
     "web": {
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/icon.png"
     },
+
     "plugins": [
       "expo-router",
       [
@@ -49,11 +56,14 @@
         }
       ]
     ],
+
     "assetBundlePatterns": ["assets/**"],
+
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
     },
+
     "extra": {
       "router": {},
       "eas": {
